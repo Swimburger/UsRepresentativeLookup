@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Google.Apis.CivicInfo.v2" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Google.Apis.CivicInfo.v2" Version="1.57.0.2692" />
+    <PackageReference Include="Twilio.AspNet.Core" Version="5.73.0" />
+  </ItemGroup>
+</Project>

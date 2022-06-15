@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsRepresentativeLookup.Api", "UsRepresentativeLookup.Api\UsRepresentativeLookup.Api.csproj", "{FAC26CCC-CD1A-49D8-8161-F320DDBC0649}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsRepresentativeLookup.Tests", "UsRepresentativeLookup.Tests\UsRepresentativeLookup.Tests.csproj", "{FE10692A-E2B9-40B3-96D3-67F2515062D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsRepresentativeLookup.Web", "UsRepresentativeLookup.Web\UsRepresentativeLookup.Web.csproj", "{FD3C31E7-F983-44D1-96E1-B76CBB8976B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FAC26CCC-CD1A-49D8-8161-F320DDBC0649}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAC26CCC-CD1A-49D8-8161-F320DDBC0649}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAC26CCC-CD1A-49D8-8161-F320DDBC0649}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAC26CCC-CD1A-49D8-8161-F320DDBC0649}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE10692A-E2B9-40B3-96D3-67F2515062D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE10692A-E2B9-40B3-96D3-67F2515062D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE10692A-E2B9-40B3-96D3-67F2515062D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE10692A-E2B9-40B3-96D3-67F2515062D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD3C31E7-F983-44D1-96E1-B76CBB8976B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD3C31E7-F983-44D1-96E1-B76CBB8976B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD3C31E7-F983-44D1-96E1-B76CBB8976B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD3C31E7-F983-44D1-96E1-B76CBB8976B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
