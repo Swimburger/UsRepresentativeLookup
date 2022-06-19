@@ -1,7 +1,7 @@
+using RepresentativeBot;
 using Twilio.AspNet.Core.MinimalApi;
 using Twilio.TwiML;
 using Twilio.TwiML.Messaging;
-using UsRepresentativeLookup.Api;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped(provider =>
@@ -25,7 +25,7 @@ app.MapPost("/message", async (
     if (bool.Parse(request.Cookies["HasBeenGreeted"] ?? "False") == false)
     {
         response.Cookies.Append("HasBeenGreeted", "True");
-        messagingResponse.Message("Welcome to U.S. Representative lookup bot. Respond with your address.");
+        messagingResponse.Message("Welcome to the U.S. Representative lookup bot. Respond with your address.");
         return Results.Extensions.TwiML(messagingResponse);
     }
 
@@ -58,8 +58,8 @@ app.MapPost("/message", async (
     }
     catch (Exception ex)
     {
-        logger.LogError(ex, "An unexpected error occured when looking up representative");
-        messagingResponse.Message("An unexpected error occured.");
+        logger.LogError(ex, "An unexpected error occurred when looking up representative");
+        messagingResponse.Message("An unexpected error occurred.");
     }
 
     return Results.Extensions.TwiML(messagingResponse);

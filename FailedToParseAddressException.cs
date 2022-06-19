@@ -1,4 +1,4 @@
-﻿namespace UsRepresentativeLookup.Api;
+namespace RepresentativeBot;
 
 public class FailedToParseAddressException : Exception
 {

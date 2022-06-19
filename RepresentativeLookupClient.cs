@@ -1,11 +1,11 @@
-﻿using System.Net;
+using System.Net;
 using Google;
 using Google.Apis.CivicInfo.v2;
 using Google.Apis.CivicInfo.v2.Data;
 using Google.Apis.Services;
 using static Google.Apis.CivicInfo.v2.RepresentativesResource;
 
-namespace UsRepresentativeLookup.Api;
+namespace RepresentativeBot;
 
 public class RepresentativeLookupClient
 {
@@ -25,9 +25,9 @@ public class RepresentativeLookupClient
         var request = new RepresentativeInfoByAddressRequest(service)
         {
             Address = address,
+            // Level = Country and Roles = LegislatorLowerBody filters down to U.S. Representatives
             Levels = RepresentativeInfoByAddressRequest.LevelsEnum.Country,
-            Roles = RepresentativeInfoByAddressRequest.RolesEnum
-                .LegislatorLowerBody // also known as U.S. Representative
+            Roles = RepresentativeInfoByAddressRequest.RolesEnum.LegislatorLowerBody
         };
 
         RepresentativeInfoResponse response;
@@ -50,7 +50,7 @@ public class RepresentativeLookupClient
         }
 
         // only one office, one division, and one official will be returned
-        // the office of U.S. Representative, the congressional district, and the elected official
+        // the office of U.S. representative, the congressional district, and the elected official
         var office = response.Offices[0];
         var division = response.Divisions[office.DivisionId];
         var official = response.Officials[0];
@@ -62,12 +62,4 @@ public class RepresentativeLookupClient
             PhotoUrl = official.PhotoUrl
         };
     }
-}
-
-public class Representative
-{
-    public string DistrictName { get; set; }
-    public string RepresentativeName { get; set; }
-    public string Party { get; set; }
-    public string PhotoUrl { get; set; }
 }
